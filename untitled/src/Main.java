@@ -12,6 +12,8 @@ import java.util.Date;
 
 public class Main {
     public static void main(String[] args) {
-
+        LocalDateTime dt = LocalDateTime.now();
+        System.out.println("\nNext Friday: "+dt.with(TemporalAdjusters.next(DayOfWeek.FRIDAY)));
+        System.out.println("Previous Friday: "+dt.with(TemporalAdjusters.previous(DayOfWeek.FRIDAY))+"\n");
     }
 }
